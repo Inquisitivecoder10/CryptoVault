@@ -1,0 +1,265 @@
+body {
+    background-color: #141424;;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    width: 100%;
+   }
+
+   .content{
+    color: whitesmoke;
+   }
+
+   .title-line {
+    font-size: 2em; /* Adjust the font size as needed */
+    line-height: 1.2; /* Adjust the line spacing as needed */
+}
+
+   #menu-bar {
+    background: #2d2d3a; /* Thin background color */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 3px 100px; /* Reduced vertical padding */
+    z-index: 100;
+}
+
+
+.menu {
+    display: flex;
+    align-items: center; /* Aligns items vertically in the center */
+    gap: 20px; /* Adds some space between the menu items */
+    list-style: none; /* Removes default bullets off lists */
+}
+
+.menu li {
+    margin-right: 20px; /* Adds some space between the menu items */
+}
+
+.menu a {
+    display: block;
+    padding: 0.5em 1em; /* Adjust padding to reduce border size */
+    text-decoration: none;
+    color: white;
+    border: none; /* Ensure no border is applied */
+    transition: background 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.menu a:hover {
+    background: #CF9FFF; /* Purple glowing background on hover */
+    color: black; /* Optional: Change text color on hover for better contrast */
+}
+
+section {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.video-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    opacity: 0.5; /* Adjust based on your preference */
+}
+
+.image-container {
+    position: absolute;
+    right: 0;
+    width: 50%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.image-container img {
+    width: 100%;
+    height: auto;
+    transition: transform 1s ease-in-out;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.video-background video {
+    display: block;
+    margin: 0 auto;
+    width: 80%; /* Adjust the width as needed */
+}
+
+/* ABOUT US */
+
+#about {
+    display: flex;
+    flex-direction: column; /* Stack children vertically */
+    justify-content: flex-start; /* Align to the top */
+    align-items: center; /* Center horizontally */
+    height: 100vh; /* Adjust as needed */
+    position: relative;
+    background: linear-gradient(to right, #CF9FFF, #CF9FFF); /* Example gradient */
+    padding-top: 20px; /* Add space at the top */
+}
+
+.content-container {
+text-align: center;
+padding: 0;
+}
+
+h2 {
+    font-size: 2.5rem; /* Reduced size */
+    color: whitesmoke;
+    margin: 0; /* Remove default margin */
+    margin-top: 0;
+}
+
+.text-video-container {
+    display: flex;
+    justify-content:right;
+    width: 100%;
+    padding: 20px; /* Adjust as needed */
+}
+
+.text-container {
+    width: 45%; /* Adjust as needed */
+    text-align: left;
+}
+
+.video-container {
+    width: -500px; /* Adjust as needed */
+    height: 500px; /* Adjust the height as needed */
+     /* Hide any overflow content */
+    align-items:right;
+}
+
+.video-container video {
+    width: 100%;
+    height: 75%;
+    object-fit: cover; /* Cover the container while maintaining aspect ratio */
+    align-items: right;
+}
+
+
+/* LOG IN */
+.login-card {
+    display: none; /* Hide by default */
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(255, 255, 255, 0.192); /* Increased opacity for a more translucent effect */
+    border-radius: 10px;
+    padding: 20px;
+    backdrop-filter: blur(10px); /* Glass effect */
+    z-index: 1000; /* Ensure it's above other content */
+}
+
+.login-card-content {
+    max-width: 400px;
+    width: 100%;
+    text-align: center;
+    color: #CF9FFF; /* Changed text color for better visibility */
+}
+
+.login-card-content h2 {
+    margin-bottom: 20px;
+    color: #CF9FFF; /* Ensure the heading text is also visible */
+}
+
+.login-card-content input,
+.login-card-content button {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: none;
+    background: rgba(255, 255, 255, 0.1); /* Semi-transparent background */
+    border-radius: 5px;
+    color: #000; /* Ensure the input text is visible */
+}
+
+.login-card-content button {
+    color: #CF9FFF;
+    cursor: pointer;
+}
+
+/* PORTFOLIO PAGE */
+/* Common styles for the entire website */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #141424;
+    color: #CF9FFF; /* Assuming this is the primary text color */
+}
+
+/* Navigation Bar */
+#menu-bar {
+    background: #2d2d3a; /* Thin background color */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 3px 100px; /* Adjust as needed */
+    z-index: 100;
+}
+
+.menu {
+    display: flex;
+    align-items: center; /* Aligns items vertically in the center */
+    gap: 20px; /* Adds some space between the menu items */
+    list-style: none; /* Removes default bullets off lists */
+}
+
+.menu li {
+    margin-right: 20px; /* Adds some space between the menu items */
+}
+
+.menu a {
+    display: block;
+    padding: 0.5em 1em; /* Adjust padding to reduce border size */
+    text-decoration: none;
+    color: white;
+    border: none; /* Ensure no border is applied */
+    transition: background 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.menu a:hover {
+    background: #CF9FFF; /* Purple glowing background on hover */
+    color: black; /* Optional: Change text color on hover for better contrast */
+}
+
+/* Sections */
+section {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 20px;
+}
+
+/* Portfolio Page Specific Styles */
+#home h1 {
+    font-size: 2em; /* Adjust as needed */
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#home p {
+    font-size: 1.2em; /* Adjust as needed */
+    text-align: center;
+    max-width: 80%;
+    margin: 0 auto;
+}
+

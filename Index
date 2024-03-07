@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CryptoVault</title>
+    <link rel="stylesheet" href="styles2.css">
+</head>
+<body>
+    
+    <nav id="menu-bar">
+        <ul class="menu">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#contact">Contact Us</a></li>
+            <li><a href="#login">LogIn</a></li>
+            <li><a href="#register">Register</a></li>
+        </ul>
+    </nav>    
+
+    <section id="home">
+        <div class="video-background">
+            <!-- Video will be placed here -->
+            <div class="video-background">
+                <video id="home-video" autoplay loop muted>
+                    <source src="Untitled video - Made with Clipchamp.mp4" type="video/mp4">
+                </video>
+            </div> 
+        </div>
+        <div class="content">
+            <h1>
+                <div class="title-line">CryptoVault: Your Personal</div>
+                <div class="title-line">Portfolio Manager</div>
+            </h1>
+        </div>
+        </section>        
+
+        <section id="about">
+            <div class="content-container">
+                <h2>About Us</h2>
+                <div class="text-video-container">
+                    <div class="text-container">
+                        <p>Your animated text goes here.</p>
+                    </div>
+                    <div class="video-container">
+                        <video autoplay loop muted>
+                            <source src="original-dfc152814025edd7c86c4fa706468e4a (online-video-cutter.com).mp4" type="video/mp4">
+                        </video>
+                    </div>
+                </div>
+            </div>
+
+    </section>
+        
+    <section id="contact">
+        <!-- Contact Us content -->
+    </section>
+    <!-- Add this just before the closing </body> tag -->
+<div id="login-card" class="login-card">
+    <div class="login-card-content">
+        <h2>LogIn</h2>
+        <form>
+            <input type="email" id="email" placeholder="Email">
+            <input type="password" id="password" placeholder="Password">
+            <button type="submit">LogIn</button>
+        </form>
+    </div>
+</div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="scripts11.js"></script>
+</body>
+</html>

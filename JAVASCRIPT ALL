@@ -1,0 +1,78 @@
+document.addEventListener('DOMContentLoaded', function() {
+    const video = document.getElementById('home-video');
+    video.play(); // Start playing the video
+
+    video.onplaying = function() {
+        console.log('Video is playing');
+    };
+
+    setTimeout(function() {
+        video.pause(); // Pause the video after 3 seconds
+        document.getElementById('about').scrollIntoView({ behavior: 'smooth' }); // Scroll to the about us section
+    }, 3000); // 3000 milliseconds = 3 seconds
+});
+
+document.addEventListener('DOMContentLoaded', function() {
+    const video = document.getElementById('home-video');
+    video.play(); // Start playing the video
+
+    video.addEventListener('ended', function() {
+        document.getElementById('about').scrollIntoView({ behavior: 'smooth' }); // Scroll to the about us section
+    });
+});
+
+/* REFRESH PAGE */
+
+window.onload = function() {
+    document.getElementById('home').scrollIntoView({ behavior: 'smooth' });
+};
+
+
+/* ABOUT US */
+
+window.addEventListener('scroll', function() {
+    const aboutSection = document.getElementById('about');
+    const video = document.getElementById('about-video');
+    const rect = aboutSection.getBoundingClientRect();
+    const isInViewport = rect.top >= 0 && rect.bottom <= window.innerHeight;
+
+    if (isInViewport) {
+        video.style.transform = 'scale(0.5)'; // Zoom out
+    } else {
+        video.style.transform = 'scale(1)'; // Zoom in
+    }
+});
+
+window.addEventListener('scroll', function() {
+    var aboutSection = document.getElementById('about');
+    var rect = aboutSection.getBoundingClientRect();
+    var isInViewport = rect.top >= 0 && rect.bottom <= window.innerHeight;
+
+    if (isInViewport) {
+        var scrollPosition = window.scrollY;
+        var heading = document.querySelector('#about h2');
+        var fontSize = Math.max(2, 2 + scrollPosition / 100); // Adjust the formula as needed
+        heading.style.fontSize = fontSize + 'em';
+    }
+});
+
+/* LOG IN */
+document.querySelector('#menu-bar a[href="#login"]').addEventListener('click', function(event) {
+    event.preventDefault(); // Prevent the default action of the link
+    document.getElementById('login-card').style.display = 'block'; // Show the login card
+});
+
+// Optionally, add a way to close the login card, for example, by clicking outside of it
+window.addEventListener('click', function(event) {
+    if (event.target == document.getElementById('login-card')) {
+        document.getElementById('login-card').style.display = 'none';
+    }
+});
+
+document.querySelector('form').addEventListener('submit', function(event) {
+    event.preventDefault(); // Prevent the form from submitting normally
+    // Simulate login validation (this is just a placeholder)
+    // In a real scenario, you would validate the user's credentials here
+    // If the login is successful, redirect to the Portfolio Page
+    window.location.href = "portfolio.html"; // Redirect to the Portfolio Page
+});
